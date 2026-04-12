@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Beyond the Quota: Why Korea's Disability Employment Reform Needs Vocational Rehabilitation at Its Core</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300;1,9..40,400&display=swap" rel="stylesheet" />
+  <style>
+    /* ── Design tokens ── */
+    :root {
+      --cream: #FAF7F2;
+      --warm-white: #FFFDF9;
+      --sand: #F0EAE0;
+      --terracotta: #C17A5A;
+      --terracotta-light: #D4956D;
+      --terracotta-dark: #9A5A3A;
+      --sage: #7A9E8E;
+      --sage-light: #A8C4B8;
+      --sage-dark: #4E7A6A;
+      --charcoal: #2C2825;
+      --warm-gray: #6B6560;
+      --light-gray: #B8B2AA;
+      --border: rgba(44, 40, 37, 0.1);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { font-size: 16px; scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background-color: var(--cream);
+      color: var(--charcoal);
+      line-height: 1.7;
+    }
+
+    /* ── Nav ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 2rem;
+      background: rgba(250, 247, 242, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-logo {
+      font-family: 'Lora', serif;
+      font-weight: 600;
+      font-size: 1.05rem;
+      color: var(--charcoal);
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 0.88rem;
+      font-weight: 500;
+      color: var(--warm-gray);
+      text-decoration: none;
+      letter-spacing: 0.02em;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--terracotta); }
+
+    /* ── Main layout ── */
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 9rem 2rem 6rem;
+    }
+
+    /* ── Post tag ── */
+    .post-tag {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--sage-dark);
+      background-color: rgba(122, 158, 142, 0.12);
+      padding: 0.3rem 0.75rem;
+      border-radius: 20px;
+      margin-bottom: 1.25rem;
+    }
+
+    /* ── Post title ── */
+    .post-title {
+      font-family: 'Lora', serif;
+      font-size: clamp(1.9rem, 4vw, 2.8rem);
+      font-weight: 700;
+      line-height: 1.2;
+      color: var(--charcoal);
+      margin-bottom: 1.25rem;
+    }
+
+    .post-title em {
+      font-style: italic;
+      color: var(--terracotta);
+    }
+
+    /* ── Post meta ── */
+    .post-meta {
+      font-size: 0.85rem;
+      color: var(--light-gray);
+      margin-bottom: 2rem;
+      letter-spacing: 0.01em;
+    }
+
+    /* ── Divider ── */
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 2rem 0;
+    }
+
+    /* ── Post body ── */
+    .post-body {
+      font-size: 1.06rem;
+      line-height: 1.8;
+      color: var(--charcoal);
+    }
+
+    .post-body p {
+      margin-bottom: 1.5rem;
+    }
+
+    .post-body h2 {
+      font-family: 'Lora', serif;
+      font-size: 1.45rem;
+      font-weight: 600;
+      color: var(--charcoal);
+      margin-top: 2.5rem;
+      margin-bottom: 0.9rem;
+    }
+
+    .post-body h3 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--charcoal);
+      margin-top: 2rem;
+      margin-bottom: 0.6rem;
+    }
+
+    /* ── Pullquote ── */
+    .pullquote {
+      border-left: 3px solid var(--terracotta);
+      background-color: var(--warm-white);
+      padding: 1.25rem 1.5rem;
+      margin: 2rem 0;
+      border-radius: 0 8px 8px 0;
+    }
+
+    .pullquote p {
+      font-family: 'Lora', serif;
+      font-style: italic;
+      font-size: 1.1rem;
+      line-height: 1.65;
+      color: var(--charcoal);
+      margin-bottom: 0 !important;
+    }
+
+    /* ── Highlight box ── */
+    .highlight-box {
+      background-color: var(--sand);
+      border-radius: 16px;
+      padding: 1.5rem 1.75rem;
+      margin: 2rem 0;
+    }
+
+    .box-title {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--terracotta-dark);
+      margin-bottom: 0.9rem;
+    }
+
+    .highlight-box p {
+      margin-bottom: 0.6rem;
+    }
+
+    .highlight-box p:last-child { margin-bottom: 0; }
+
+    /* ── Factor grid ── */
+    .factor-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+
+    @media (max-width: 540px) {
+      .factor-grid { grid-template-columns: 1fr; }
+    }
+
+    .factor-card {
+      background-color: var(--warm-white);
+      border-radius: 12px;
+      padding: 1.25rem 1.4rem;
+      border: 1px solid var(--border);
+    }
+
+    .factor-card .card-label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      margin-bottom: 0.75rem;
+    }
+
+    .factor-card.internal .card-label { color: var(--terracotta); }
+    .factor-card.external .card-label { color: var(--sage-dark); }
+
+    .factor-card ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .factor-card ul li {
+      font-size: 0.9rem;
+      color: var(--warm-gray);
+      padding: 0.25rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .factor-card ul li:last-child { border-bottom: none; }
+
+    /* ── Author row ── */
+    .author-row {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-top: 2.5rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .author-avatar {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--terracotta), var(--sage));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: white;
+      letter-spacing: 0.04em;
+      flex-shrink: 0;
+    }
+
+    .author-info .author-name {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--charcoal);
+    }
+
+    .author-info .author-title {
+      font-size: 0.82rem;
+      color: var(--warm-gray);
+      margin-top: 0.15rem;
+    }
+
+    /* ── Back button ── */
+    .back-btn {
+      display: inline-block;
+      margin-top: 2.5rem;
+      padding: 0.6rem 1.4rem;
+      background-color: var(--terracotta);
+      color: white;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.88rem;
+      font-weight: 500;
+      border-radius: 24px;
+      text-decoration: none;
+      transition: background-color 0.2s;
+    }
+
+    .back-btn:hover { background-color: var(--terracotta-dark); }
+
+    /* ── Sources ── */
+    .sources {
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .sources h3 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--light-gray);
+      margin-bottom: 1rem;
+    }
+
+    .sources ol {
+      padding-left: 1.25rem;
+    }
+
+    .sources ol li {
+      font-size: 0.83rem;
+      color: var(--warm-gray);
+      margin-bottom: 0.4rem;
+      line-height: 1.5;
+    }
+
+    .sources ol li a {
+      color: var(--sage-dark);
+      text-decoration: none;
+    }
+
+    .sources ol li a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="../index.html" class="nav-logo">Wonny Kim</a>
+    <ul class="nav-links">
+      <li><a href="../index.html#about">About</a></li>
+      <li><a href="../index.html#blog">Blog</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <span class="post-tag">Disability Employment Policy</span>
+
+    <h1 class="post-title">
+      Beyond the Quota: Why Korea's Disability Employment Reform
+      Needs <em>Vocational Rehabilitation</em> at Its Core
+    </h1>
+
+    <p class="post-meta">
+      Jeongwon (Wonny) Kim &nbsp;·&nbsp; April 12, 2026 &nbsp;·&nbsp; 9 min read
+    </p>
+
+    <hr class="divider" />
+
+    <article class="post-body">
+
+      <p>
+        This past February, Korea made a quiet but significant announcement: for the first time in
+        eight years, the country would raise its mandatory disability employment quota for private
+        sector companies. The rate climbs from 3.1% to 3.3% this year, with a phased trajectory
+        reaching 3.9% by 2029. The public sector ceiling will follow, rising toward 4%. Alongside
+        the quota increase, the Lee administration pledged a record 1 trillion won budget for
+        disability employment programs through the Ministry of Employment and Labor.
+      </p>
+
+      <p>
+        On paper, this is progress. An eight-year freeze had left Korea's legal framework
+        significantly behind its stated goals, and advocates had long called for action. But as
+        someone who has worked within both the Korean and U.S. vocational rehabilitation systems,
+        I find myself holding this news with a mixture of hope and caution. Because the numbers
+        tell a more complicated story — and the story points directly to what comprehensive
+        vocational rehabilitation is for.
+      </p>
+
+      <h2>The Paradox in the Data</h2>
+
+      <p>
+        While Korea's mandatory employment quota system has been in place for decades, the
+        employment rate for people with disabilities has actually been <em>declining</em>. It
+        stood at 50.3% in 2022, dropped to 49.8% in 2023, and fell again to 48.4% in 2024.
+        Meanwhile, national employment rates have trended upward for the general population.
+        Perhaps more striking: a separate 2024 survey found that fewer than 3 in 10 South Koreans
+        with physical or mental disabilities were employed — a figure of just 28.9%.
+      </p>
+
+      <p>
+        This divergence matters. It tells us that compliance thresholds and employment rates are
+        not the same thing, and that a higher quota number does not automatically translate into
+        more meaningful participation in the labor market. In Seoul, 19 of 23 affiliated public
+        agencies achieved the disability employment threshold by end of 2025 — an encouraging
+        compliance rate of 83%. Yet penalty payments for non-compliance, while declining, still
+        exist: 255 million won paid in 2025 alone. These penalties, it should be noted, can
+        function as a fee that companies pay to opt out of hiring — trading obligation for cost
+        rather than changing practice.
+      </p>
+
+      <div class="pullquote">
+        <p>
+          "A quota gets someone in the door. Vocational rehabilitation is what makes it possible
+          for them to stay — and to grow."
+        </p>
+      </div>
+
+      <p>
+        This is the central tension. Quota policies are a lever of structural change, and I
+        genuinely support their role. They shift employer behavior, signal social norms, and open
+        doors that market forces alone would keep closed. But they cannot, on their own, address
+        the skills gap, the accommodation gap, the attitude gap, or the wellbeing gap that many
+        workers with disabilities face once they are hired. For that, you need the kind of
+        individualized, evidence-based support that vocational rehabilitation was designed to
+        provide.
+      </p>
+
+      <h2>What Quotas Can't Do</h2>
+
+      <p>
+        Let me be specific about where mandatory employment quotas reach their limits, because
+        understanding this is essential for practitioners and policymakers alike.
+      </p>
+
+      <div class="factor-grid">
+        <div class="factor-card internal">
+          <div class="card-label">Person-Level Gaps</div>
+          <ul>
+            <li>Underdeveloped vocational skills or work history</li>
+            <li>Mental health barriers (anxiety, depression, PTSD)</li>
+            <li>Low self-efficacy and unclear vocational identity</li>
+            <li>Lack of job-seeking strategies and workplace literacy</li>
+            <li>Medical or functional limitations not yet accommodated</li>
+          </ul>
+        </div>
+        <div class="factor-card external">
+          <div class="card-label">System-Level Gaps</div>
+          <ul>
+            <li>Jobs offered without meaningful role design</li>
+            <li>Absent or tokenistic workplace accommodations</li>
+            <li>Supervisors untrained in disability inclusion</li>
+            <li>No ongoing job retention support after placement</li>
+            <li>Penalty-based compliance culture, not inclusion culture</li>
+          </ul>
+        </div>
+      </div>
+
+      <p>
+        Both columns matter. And addressing them requires professionals who are trained to work
+        systematically at the intersection of person and environment — which is exactly the scope
+        of vocational rehabilitation counseling and vocational evaluation.
+      </p>
+
+      <h2>The Evidence We Have: What Actually Works</h2>
+
+      <p>
+        If we want disability employment outcomes to genuinely improve alongside Korea's expanding
+        quota ambitions, we should look carefully at the evidence base that has accumulated over
+        the past three decades.
+      </p>
+
+      <p>
+        The most rigorously studied model is Individual Placement and Support (IPS), developed
+        in the United States as a supported employment approach for people with serious mental
+        illness. IPS operates on a deceptively simple principle: place first, train second. Rather
+        than preparing people in sheltered settings before attempting competitive employment, IPS
+        integrates employment specialists directly into clinical or rehabilitation teams, helps
+        clients find real jobs in the community that match their preferences, and provides
+        individualized support on the job for as long as needed.
+      </p>
+
+      <p>
+        The evidence for IPS is remarkable in a field where outcomes often disappoint. Systematic
+        reviews show consistent, substantial advantages over conventional vocational services on
+        job entry rates, time to employment, earnings, and work hours. A 2026 longitudinal study
+        from Italy following people with severe mental illness found sustained positive employment
+        outcomes over time, reinforcing what U.S. research has demonstrated for years. IPS has
+        now been implemented in over 80% of U.S. states and in approximately 20 countries
+        worldwide.
+      </p>
+
+      <p>
+        In Korea, the story of supported employment is one of unrealized potential. Academic
+        analyses have noted that despite three decades since supported employment was introduced
+        in Korea, the system has largely functioned as a training arrangement rather than a true
+        employment model. Research has called for development of a "Korean-style supported
+        employment model" — one that adapts the evidence base to Korea's labor market structures,
+        family dynamics, and disability service ecosystem. This is, in my view, one of the most
+        important development priorities for Korean vocational rehabilitation right now.
+      </p>
+
+      <h2>The Role of Vocational Evaluation</h2>
+
+      <p>
+        Before placement comes assessment. One of the things that drew me to pursue the Certified
+        Vocational Evaluator (CVE) credential is my belief that good evaluation is the foundation
+        of everything that follows. A thorough vocational evaluation does not simply document what
+        a person cannot do — it maps the full landscape of their work-related strengths, interests,
+        functional capacities, learning styles, and transferable skills. It provides the
+        individualized data that makes person-centered planning possible.
+      </p>
+
+      <div class="highlight-box">
+        <div class="box-title">What a Vocational Evaluation Addresses</div>
+        <p>
+          <strong>Work samples and situational assessments</strong> — direct observation of how
+          someone performs actual or simulated work tasks, capturing strengths that paper
+          assessments miss.
+        </p>
+        <p>
+          <strong>Psychological and aptitude testing</strong> — standardized tools that identify
+          cognitive patterns, learning needs, and vocational interests.
+        </p>
+        <p>
+          <strong>Functional capacity and accommodation needs</strong> — what physical,
+          sensory, or cognitive adaptations would allow this person to perform optimally?
+        </p>
+        <p>
+          <strong>Labor market alignment</strong> — which occupational areas have realistic demand
+          that intersects with this person's profile and location?
+        </p>
+      </div>
+
+      <p>
+        In the U.S. system, vocational evaluation findings feed directly into the Individualized
+        Plan for Employment (IPE) — the roadmap for a person's rehabilitation journey. In Korea,
+        the equivalent planning process exists within vocational rehabilitation centers (직업재활센터)
+        and employment support services through the Korea Employment Agency for Persons with
+        Disabilities (KEAD, 한국장애인고용공단). But the depth of evaluation practice, the training
+        of evaluators, and the integration of evaluation findings into individualized planning
+        varies widely.
+      </p>
+
+      <p>
+        Expanding Korea's mandatory quota without investing in the evaluation and counseling
+        infrastructure to support job seekers with disabilities is like raising a doorway without
+        building the path that leads to it. The door matters. So does the path.
+      </p>
+
+      <h2>Two Systems, One Goal</h2>
+
+      <p>
+        I came to vocational rehabilitation through the U.S. system, trained as a CRC with an
+        understanding of federal-state VR programs, WIOA frameworks, and a strong tradition of
+        person-centered, consumer-driven practice. Living and working now in Gangneung, I am
+        learning — continually and sometimes humbly — that systems shape not just services but
+        assumptions about disability, work, and what people deserve.
+      </p>
+
+      <p>
+        In the U.S., the Rehabilitation Act enshrines a presumption of employability: every person
+        with a disability is presumed capable of competitive integrated employment unless a
+        thorough assessment indicates otherwise. This is a radical philosophical premise when
+        taken seriously. It shifts the burden of proof. It centers the person's goals, not the
+        system's convenience.
+      </p>
+
+      <p>
+        Korea's approach has historically been more paternalistic — disability categories
+        determine service eligibility in ways that can limit rather than expand options, and
+        job-matching has sometimes been driven more by employer preferences than client goals.
+        But I see movement. I see practitioners and researchers pushing for better models. I see
+        the KEAD investing in vocational training infrastructure. And I see, in this year's quota
+        reform, a government at least acknowledging that the status quo is not working.
+      </p>
+
+      <div class="pullquote">
+        <p>
+          "What matters in the end is not that a quota was met. What matters is whether a person
+          found work that fits — work that uses their abilities, pays a living wage, and feels
+          worth showing up for."
+        </p>
+      </div>
+
+      <p>
+        Both systems have things to learn from each other. Korea's deep investment in family and
+        community networks, its emphasis on collective wellbeing, and its emerging interest in
+        culturally adapted service models offer real strengths. The U.S. tradition of
+        individualized planning, consumer self-determination, and evidence-based supported
+        employment offers frameworks worth adapting. The best outcomes come from holding both.
+      </p>
+
+      <h2>What I'm Watching — and Hoping For</h2>
+
+      <p>
+        As Korea implements this quota increase over the next few years, here is what I believe
+        will determine whether the employment lives of people with disabilities actually improve:
+      </p>
+
+      <p>
+        <strong>Investment in vocational evaluation capacity.</strong> Training more qualified
+        vocational evaluators — professionals who can administer and interpret standardized
+        assessments, conduct situational evaluations, and translate findings into actionable
+        vocational plans — is foundational. Evaluation quality directly affects everything
+        downstream.
+      </p>
+
+      <p>
+        <strong>Development of genuine supported employment.</strong> Moving Korea's supported
+        employment system from a training-first to a placement-first model, with qualified job
+        coaches providing ongoing, individualized workplace support, is the single highest-leverage
+        practice improvement available.
+      </p>
+
+      <p>
+        <strong>Employer engagement beyond compliance.</strong> The most effective vocational
+        rehabilitation programs in the U.S. treat employer relationship-building as a core
+        professional function, not an afterthought. Counselors and job developers who understand
+        labor market needs and can match them with worker capabilities create sustainable placements
+        — not quota-filling arrangements.
+      </p>
+
+      <p>
+        <strong>Mental health integration.</strong> A significant and underserved portion of Korea's
+        disability employment gap involves people with psychiatric disabilities. Evidence from IPS
+        research globally makes clear that integrating employment support with mental health care —
+        not sequencing one before the other — produces substantially better outcomes.
+      </p>
+
+      <h2>A Final Thought</h2>
+
+      <p>
+        When I sit across from a client and work through a vocational evaluation together, I am
+        reminded that this work is ultimately about possibility. Not about fitting someone into a
+        category, or filling a slot in a quota, or checking a compliance box. It is about
+        understanding a person's full range of capacities and helping them find where those
+        capacities meet the world's needs.
+      </p>
+
+      <p>
+        Korea's decision to raise its disability employment quota is a step worth acknowledging.
+        It represents political will, policy courage, and a recognition that the current numbers
+        are not acceptable. But the number on a quota form will never be the measure of success
+        that matters most. The measure that matters is whether people with disabilities in Korea —
+        and everywhere — are working in jobs that respect their dignity, use their abilities, and
+        allow them to build lives they find meaningful.
+      </p>
+
+      <p>
+        That is what vocational rehabilitation, at its best, is for. And that is the work I am
+        committed to.
+      </p>
+
+    </article>
+
+    <hr class="divider" />
+
+    <!-- Author row -->
+    <div class="author-row">
+      <div class="author-avatar">WK</div>
+      <div class="author-info">
+        <div class="author-name">Jeongwon (Wonny) Kim</div>
+        <div class="author-title">CRC · Vocational Rehabilitation Counselor · Gangneung, Korea</div>
+      </div>
+    </div>
+
+    <!-- Sources -->
+    <div class="sources">
+      <h3>Sources</h3>
+      <ol>
+        <li>
+          Seoul Economic Daily (March 4, 2026).
+          <a href="https://en.sedaily.com/society/2026/03/04/seoul-public-agencies-normalize-disabled-employment-rate" target="_blank" rel="noopener">
+            Seoul Public Agencies Normalize Disabled Employment Rate After 8 Years.
+          </a>
+        </li>
+        <li>
+          Seoul Economic Daily (February 10, 2026).
+          <a href="https://en.sedaily.com/society/2026/02/10/korea-raises-disabled-worker-hiring-quota-after-8-year" target="_blank" rel="noopener">
+            Korea Raises Disabled Worker Hiring Quota After 8-Year Freeze.
+          </a>
+        </li>
+        <li>
+          The Korea Herald.
+          <a href="https://www.koreaherald.com/article/10649020" target="_blank" rel="noopener">
+            Seven in 10 disabled Koreans are jobless: report.
+          </a>
+        </li>
+        <li>
+          The Korea Herald.
+          <a href="https://www.koreaherald.com/article/10590011" target="_blank" rel="noopener">
+            Gov't raises mandatory hiring rate for people with disabilities to up to 4%.
+          </a>
+        </li>
+        <li>
+          SSPH+ / International Journal of Public Health (2026).
+          <a href="https://www.ssph-journal.org/journals/international-journal-of-public-health/articles/10.3389/ijph.2026.1608701/full" target="_blank" rel="noopener">
+            Longitudinal Outcomes of Individual Placement and Support for Patients With Severe Mental Illness in Italy.
+          </a>
+        </li>
+        <li>
+          IPS Works (ipsworks.org).
+          <a href="https://ipsworks.org/" target="_blank" rel="noopener">
+            The IPS Employment Center — Research, Dissemination, Training, and Consultation.
+          </a>
+        </li>
+        <li>
+          PMC / NIH (2024).
+          <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11225006/" target="_blank" rel="noopener">
+            Individual Placement and Support (IPS) beyond severe mental health: An overview review and meta-analysis.
+          </a>
+        </li>
+        <li>
+          Korea Employment Agency for Persons with Disabilities (KEAD).
+          <a href="https://www.kead.or.kr/en/mdempqsys/cntntsPage.do?menuId=MENU1385" target="_blank" rel="noopener">
+            Mandatory Employment Quota System.
+          </a>
+        </li>
+        <li>
+          Korean Citation Index / KCI (2022).
+          <a href="https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART002868697" target="_blank" rel="noopener">
+            한국 지원고용의 실태와 과제 [Status and Challenges of Supported Employment in Korea].
+          </a>
+        </li>
+      </ol>
+    </div>
+
+    <a href="../index.html#blog" class="back-btn">← Back to Blog</a>
+  </main>
+
+</body>
+</html>
