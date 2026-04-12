@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Beyond Job Placement: Why Vocational Rehabilitation Is About the Whole Person | Wonny Kim</title>
+<meta name="description" content="What does a Certified Rehabilitation Counselor actually do — and why does good vocational support require understanding disability, culture, environment, and the labor market all at once?">
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #FAF7F2;
+    --warm-white: #FFFDF9;
+    --sand: #F0EAE0;
+    --terracotta: #C17A5A;
+    --terracotta-light: #D4956D;
+    --terracotta-dark: #9A5A3A;
+    --sage: #7A9E8E;
+    --sage-light: #A8C4B8;
+    --sage-dark: #4E7A6A;
+    --charcoal: #2C2825;
+    --warm-gray: #6B6560;
+    --light-gray: #B8B2AA;
+    --border: rgba(44,40,37,0.1);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--charcoal);
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    padding: 1.2rem 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(250,247,242,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-logo {
+    font-family: 'Lora', serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--charcoal);
+    text-decoration: none;
+  }
+  .nav-logo span { color: var(--terracotta); }
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links a {
+    font-size: 0.85rem;
+    color: var(--warm-gray);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--terracotta); }
+
+  /* ARTICLE */
+  .article-wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 9rem 2rem 6rem;
+  }
+
+  .back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.82rem;
+    color: var(--warm-gray);
+    text-decoration: none;
+    margin-bottom: 2.5rem;
+    transition: color 0.2s;
+  }
+  .back-link:hover { color: var(--terracotta); }
+
+  .post-tag {
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--sage-dark);
+    background: rgba(122,158,142,0.12);
+    padding: 0.3rem 0.8rem;
+    border-radius: 100px;
+    display: inline-block;
+    margin-bottom: 1.2rem;
+  }
+
+  .post-title {
+    font-family: 'Lora', serif;
+    font-size: clamp(1.9rem, 4vw, 2.8rem);
+    font-weight: 500;
+    line-height: 1.2;
+    color: var(--charcoal);
+    margin-bottom: 1rem;
+  }
+
+  .post-title em {
+    font-style: italic;
+    color: var(--terracotta);
+  }
+
+  .post-meta {
+    font-size: 0.82rem;
+    color: var(--light-gray);
+    margin-bottom: 2.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .post-meta span { display: flex; align-items: center; gap: 0.3rem; }
+
+  .divider {
+    height: 1px;
+    background: var(--border);
+    margin: 2rem 0;
+  }
+
+  /* BODY TEXT */
+  .post-body h2 {
+    font-family: 'Lora', serif;
+    font-size: 1.45rem;
+    font-weight: 500;
+    color: var(--charcoal);
+    margin: 2.5rem 0 1rem;
+    line-height: 1.3;
+  }
+
+  .post-body h3 {
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: var(--charcoal);
+    margin: 2rem 0 0.7rem;
+  }
+
+  .post-body p {
+    font-size: 1.02rem;
+    color: var(--warm-gray);
+    line-height: 1.85;
+    margin-bottom: 1.3rem;
+  }
+
+  .post-body strong {
+    color: var(--charcoal);
+    font-weight: 500;
+  }
+
+  .post-body em {
+    font-style: italic;
+  }
+
+  /* PULLQUOTE */
+  .pullquote {
+    border-left: 3px solid var(--terracotta);
+    margin: 2rem 0;
+    padding: 1rem 1.5rem;
+    background: var(--warm-white);
+    border-radius: 0 12px 12px 0;
+  }
+
+  .pullquote p {
+    font-family: 'Lora', serif;
+    font-size: 1.15rem;
+    font-style: italic;
+    color: var(--charcoal) !important;
+    line-height: 1.65;
+    margin: 0 !important;
+  }
+
+  /* HIGHLIGHT BOX */
+  .highlight-box {
+    background: var(--sand);
+    border-radius: 16px;
+    padding: 1.5rem 1.8rem;
+    margin: 2rem 0;
+  }
+
+  .highlight-box .box-title {
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--terracotta-dark);
+    margin-bottom: 0.8rem;
+  }
+
+  .highlight-box p {
+    font-size: 0.95rem !important;
+    margin-bottom: 0.6rem !important;
+  }
+
+  .highlight-box p:last-child { margin-bottom: 0 !important; }
+
+  /* FACTOR GRID */
+  .factor-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin: 1.5rem 0 2rem;
+  }
+
+  .factor-card {
+    background: var(--warm-white);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 1rem 1.2rem;
+  }
+
+  .factor-label {
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+
+  .label-internal { color: var(--terracotta); }
+  .label-external { color: var(--sage-dark); }
+
+  .factor-card p {
+    font-size: 0.88rem !important;
+    line-height: 1.6 !important;
+    margin: 0 !important;
+  }
+
+  /* FOOTER */
+  .post-footer {
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border);
+  }
+
+  .author-row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .author-avatar {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--terracotta-light), var(--sage));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Lora', serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: white;
+    flex-shrink: 0;
+  }
+
+  .author-name {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--charcoal);
+  }
+
+  .author-title {
+    font-size: 0.8rem;
+    color: var(--warm-gray);
+    margin-top: 2px;
+  }
+
+  .back-btn {
+    display: inline-block;
+    background: var(--terracotta);
+    color: white;
+    padding: 0.75rem 1.8rem;
+    border-radius: 100px;
+    font-size: 0.88rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+
+  .back-btn:hover { background: var(--terracotta-dark); }
+
+  @media (max-width: 700px) {
+    nav { padding: 1rem 1.5rem; }
+    .article-wrap { padding: 7rem 1.2rem 4rem; }
+    .factor-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="../index.html" class="nav-logo">Wonny <span>Kim</span></a>
+  <ul class="nav-links">
+    <li><a href="../index.html#about">About</a></li>
+    <li><a href="../index.html#blog">Blog</a></li>
+    <li><a href="../index.html#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="article-wrap">
+
+  <a href="../index.html#blog" class="back-link">← Back to blog</a>
+
+  <span class="post-tag">Vocational Rehabilitation</span>
+
+  <h1 class="post-title">Beyond Job Placement: Why Vocational Rehabilitation Means Seeing the <em>Whole Person</em></h1>
+
+  <div class="post-meta">
+    <span>Jeongwon (Wonny) Kim, CRC</span>
+    <span>·</span>
+    <span>April 2026</span>
+    <span>·</span>
+    <span>8 min read</span>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="post-body">
+
+    <p>When people hear "vocational rehabilitation," they often picture something simple: a counselor helps a person write a resume, connects them with a job listing, and that's that. A transaction. A placement.</p>
+
+    <p>But that picture is fundamentally incomplete — and in my experience working across both the U.S. and Korean systems, it's that incomplete picture that leads to people falling through the cracks, or landing in jobs they're ill-suited for, or returning to unemployment within months.</p>
+
+    <p>Real vocational rehabilitation is something far more layered. It requires understanding a person not just as a job-seeker, but as someone shaped by their biology, their history, their culture, their environment, and the economic structures they're trying to enter. This post is an attempt to explain what that actually looks like — and why it matters.</p>
+
+    <h2>What a Certified Rehabilitation Counselor actually does</h2>
+
+    <p>A <strong>Certified Rehabilitation Counselor (CRC)</strong> is a credentialed specialist — trained and tested by the Commission on Rehabilitation Counselor Certification (CRCC) in the United States — whose core mandate is to help people with disabilities, and others facing significant barriers to employment, achieve meaningful and sustainable work.</p>
+
+    <p>The operative word there is <em>meaningful</em>. Not just any work. Work that fits — the person's abilities, their values, their health, their life circumstances, and their aspirations.</p>
+
+    <p>To do that well, a CRC has to hold a genuinely multidimensional view of every client. That means assessing and understanding factors that most standard career coaches never consider.</p>
+
+    <div class="factor-grid">
+      <div class="factor-card">
+        <div class="factor-label label-internal">Internal factors</div>
+        <p>Disability type and functional limitations · physical and cognitive capacity · psychological and emotional wellbeing · personal values and work identity · educational background · transferable skills · strengths and resilience</p>
+      </div>
+      <div class="factor-card">
+        <div class="factor-label label-external">External factors</div>
+        <p>Labor market conditions · employer attitudes toward disability · legal protections and workplace accommodations · social support systems · cultural norms around work and disability · language and immigration status · family dynamics and community context</p>
+      </div>
+    </div>
+
+    <p>These aren't separate checklists. They interact. A person's disability may be manageable in one work environment and debilitating in another. A client's cultural background may shape how they present themselves in interviews in ways that read poorly to Korean employers without context. A strong support network can be the difference between someone sustaining employment and losing it within six months.</p>
+
+    <p>A CRC's job is to understand all of this — and to use that understanding to build a vocational plan that genuinely maximizes the person's potential.</p>
+
+    <h2>The history: how vocational rehabilitation became what it is today</h2>
+
+    <p>Vocational rehabilitation as a formal field has its roots in early 20th century America — specifically in the aftermath of World War I, when the U.S. government faced the practical challenge of reintegrating tens of thousands of soldiers who had returned with physical injuries and were unable to return to their previous occupations.</p>
+
+    <p>The Smith-Fess Act of 1920 established the first federal vocational rehabilitation program. Its goals were straightforward: retrain injured workers, get them back into productive employment. The approach was largely mechanical — match disability to available job, provide training, move on.</p>
+
+    <p>Over the following decades, however, the field evolved significantly. The <strong>Rehabilitation Act of 1973</strong> marked a turning point: for the first time, disability discrimination in federally funded programs was explicitly prohibited, and the rights of individuals with disabilities — not just their employability — became central to the framework. The <strong>Americans with Disabilities Act (ADA) of 1990</strong> extended those protections further into the private sector, mandating reasonable accommodations and reshaping how employers were expected to engage with disabled workers.</p>
+
+    <p>Crucially, the philosophy underpinning rehabilitation shifted during this period. The field moved away from a purely <em>medical model</em> — which viewed disability as a problem located within the individual, to be fixed or managed — toward a <em>social model</em>, which recognized that much of the "disability" a person experiences is produced not by their impairment itself, but by environmental barriers: inaccessible workplaces, discriminatory attitudes, inadequate support systems.</p>
+
+    <div class="pullquote">
+      <p>"Disability is not simply a medical condition. It is an interaction between a person's functional characteristics and the barriers — physical, social, attitudinal — that their environment places in front of them."</p>
+    </div>
+
+    <p>This shift had profound implications for how rehabilitation counselors were trained to think and work. The question was no longer only "what can this person do despite their disability?" but equally "what barriers exist in this environment, and how do we address them?"</p>
+
+    <h2>Where Korea stands today</h2>
+
+    <p>South Korea's formal approach to disability employment developed later, and along a somewhat different trajectory. The <strong>Act on Employment Promotion and Vocational Rehabilitation for Persons with Disabilities</strong>, first enacted in 1990 and substantially revised since, established the legal framework for disability employment policy. A key mechanism is the <strong>mandatory employment quota system</strong> — requiring public institutions and larger private companies to maintain a certain percentage of workers with disabilities — currently 3.1% for public entities and 3.1% for private companies with 50 or more employees.</p>
+
+    <p>The Korea Employment Agency for Persons with Disabilities (한국장애인고용공단, KEAD) operates as the primary institutional body supporting this system — providing vocational assessment, job placement, employer consulting, and follow-up support services.</p>
+
+    <p>Progress has been real. Employment rates for people with disabilities in Korea have risen meaningfully over the past two decades, and awareness of disability rights has grown considerably — particularly among younger employers and HR professionals. The introduction of evidence-based models like <strong>IPS (Individual Placement and Support)</strong>, originally developed in the U.S. for people with serious mental health conditions, represents a genuine step forward in how Korea approaches supported employment.</p>
+
+    <p>But significant gaps remain. Stigma around disability — particularly psychiatric and cognitive disabilities — persists strongly in many workplace cultures. Accommodation practices are inconsistently implemented. And the population that vocational rehabilitation serves in Korea has broadened considerably beyond its original scope: the country now has a substantial and growing community of immigrants, migrant workers, and international residents who face their own complex, intersecting barriers to employment — barriers that the current system was not designed to address.</p>
+
+    <h2>Why multidimensional thinking is not optional</h2>
+
+    <p>I want to return to that word: <em>meaningful</em>. Because it's where the real argument lives.</p>
+
+    <p>A purely transactional approach to job placement — find an opening, match a candidate, facilitate the hire — can produce employment. But employment alone is not the goal. <strong>Sustainable, dignified, growth-oriented work</strong> is the goal. Work that a person can actually do well, and that respects who they are.</p>
+
+    <p>To get there, you have to understand the person. Not just their disability diagnosis, not just their work history, not just their language level — but the full picture of who they are and what they're navigating.</p>
+
+    <div class="highlight-box">
+      <div class="box-title">What this looks like in practice</div>
+      <p>A client who is a Vietnamese immigrant worker in Korea with a physical disability is not simply "a person with a disability." They are someone navigating a labor market in a second or third language, under a visa status that may constrain their employment options, within a workplace culture that may have little experience with disability accommodation, while managing the psychological weight of cultural displacement and financial precarity.</p>
+      <p>A CRC working with this person needs to understand all of those layers — not to be overwhelmed by them, but to build a plan that actually works in the real conditions of that person's life.</p>
+    </div>
+
+    <p>This is what the concept of <strong>empowerment</strong> means in vocational rehabilitation — not simply placing someone in a job, but building the person's own capacity to understand their rights, navigate systems, advocate for accommodations, and make informed choices about their vocational future. The goal is not dependence on a counselor. The goal is a person who has the knowledge, confidence, and practical tools to direct their own working life.</p>
+
+    <h2>Why I do this work — and write about it</h2>
+
+    <p>I hold a CRC credential, I am working toward a CVE (Certified Vocational Evaluator), and I have worked in both the U.S. vocational rehabilitation system — through DVR partnerships and IPS delivery at Aurora Vocational Services — and the Korean welfare and international student support contexts. I write about this because I believe the gap between what vocational rehabilitation can be, and what most people assume it is, matters.</p>
+
+    <p>In Korea especially, there are individuals — people with disabilities, immigrants, international students, multicultural families — who need the kind of nuanced, evidence-based, person-centered support that this field offers. And too often, they either don't know it exists, or they encounter systems that aren't equipped to serve the full complexity of their situation.</p>
+
+    <p>The work of a CRC, done well, is not bureaucratic case management. It is the careful, sustained effort to understand a human being in their full context — and to help them find their place in the world of work with dignity and agency.</p>
+
+    <p>That's what I'm here to write about.</p>
+
+  </div>
+
+  <div class="post-footer">
+    <div class="author-row">
+      <div class="author-avatar">WK</div>
+      <div>
+        <div class="author-name">Jeongwon (Wonny) Kim</div>
+        <div class="author-title">CRC · Vocational Rehabilitation Counselor · Gangneung, Korea</div>
+      </div>
+    </div>
+    <a href="../index.html#blog" class="back-btn">← Back to blog</a>
+  </div>
+
+</div>
+
+</body>
+</html>
