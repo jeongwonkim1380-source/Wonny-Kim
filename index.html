@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jeongwon (Wonny) Kim · Vocational Counselor & Career Specialist</title>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #FAF7F2;
+    --warm-white: #FFFDF9;
+    --sand: #F0EAE0;
+    --terracotta: #C17A5A;
+    --terracotta-light: #D4956D;
+    --terracotta-dark: #9A5A3A;
+    --sage: #7A9E8E;
+    --sage-light: #A8C4B8;
+    --sage-dark: #4E7A6A;
+    --charcoal: #2C2825;
+    --warm-gray: #6B6560;
+    --light-gray: #B8B2AA;
+    --border: rgba(44,40,37,0.1);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--charcoal);
+    font-size: 16px;
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    padding: 1.2rem 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(250,247,242,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .nav-logo {
+    font-family: 'Lora', serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--charcoal);
+    text-decoration: none;
+    letter-spacing: 0.01em;
+  }
+
+  .nav-logo span { color: var(--terracotta); }
+
+  .nav-links {
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: var(--warm-gray);
+    text-decoration: none;
+    letter-spacing: 0.04em;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--terracotta); }
+
+  .nav-cta {
+    background: var(--terracotta) !important;
+    color: white !important;
+    padding: 0.5rem 1.2rem;
+    border-radius: 100px;
+    font-size: 0.82rem !important;
+    transition: background 0.2s !important;
+  }
+
+  .nav-cta:hover { background: var(--terracotta-dark) !important; }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 7rem 3rem 4rem;
+    gap: 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .hero-text { animation: fadeUp 0.8s ease both; }
+
+  .hero-eyebrow {
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--terracotta);
+    margin-bottom: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+  }
+
+  .hero-eyebrow::before {
+    content: '';
+    display: block;
+    width: 28px;
+    height: 1.5px;
+    background: var(--terracotta);
+  }
+
+  .hero h1 {
+    font-family: 'Lora', serif;
+    font-size: clamp(2.4rem, 4vw, 3.6rem);
+    font-weight: 500;
+    line-height: 1.2;
+    color: var(--charcoal);
+    margin-bottom: 1.5rem;
+  }
+
+  .hero h1 em {
+    font-style: italic;
+    color: var(--terracotta);
+  }
+
+  .hero-desc {
+    font-size: 1.05rem;
+    color: var(--warm-gray);
+    line-height: 1.75;
+    margin-bottom: 2.5rem;
+    max-width: 480px;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .btn-primary {
+    background: var(--terracotta);
+    color: white;
+    padding: 0.85rem 2rem;
+    border-radius: 100px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.15s;
+    display: inline-block;
+  }
+
+  .btn-primary:hover {
+    background: var(--terracotta-dark);
+    transform: translateY(-1px);
+  }
+
+  .btn-secondary {
+    color: var(--charcoal);
+    font-size: 0.9rem;
+    font-weight: 400;
+    text-decoration: none;
+    padding: 0.85rem 0;
+    border-bottom: 1.5px solid var(--charcoal);
+    transition: color 0.2s, border-color 0.2s;
+  }
+
+  .btn-secondary:hover {
+    color: var(--terracotta);
+    border-color: var(--terracotta);
+  }
+
+  .hero-creds {
+    display: flex;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+  }
+
+  .cred-pill {
+    font-size: 0.72rem;
+    font-weight: 500;
+    padding: 0.3rem 0.85rem;
+    border-radius: 100px;
+    letter-spacing: 0.03em;
+    border: 1.5px solid;
+  }
+
+  .cred-pill.active {
+    background: var(--sage-light);
+    border-color: var(--sage);
+    color: var(--sage-dark);
+  }
+
+  .cred-pill.progress {
+    background: transparent;
+    border-color: var(--terracotta-light);
+    color: var(--terracotta-dark);
+  }
+
+  .hero-visual {
+    animation: fadeUp 0.8s 0.15s ease both;
+    position: relative;
+  }
+
+  .hero-card {
+    background: var(--warm-white);
+    border-radius: 24px;
+    border: 1px solid var(--border);
+    padding: 2.5rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-card::before {
+    content: '';
+    position: absolute;
+    top: 0; right: 0;
+    width: 160px; height: 160px;
+    background: radial-gradient(circle, rgba(193,122,90,0.12) 0%, transparent 70%);
+    border-radius: 0 24px 0 0;
+  }
+
+  .avatar-ring {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--terracotta-light), var(--sage));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Lora', serif;
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: white;
+    margin-bottom: 1.4rem;
+  }
+
+  .hero-card h3 {
+    font-family: 'Lora', serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 0.3rem;
+  }
+
+  .hero-card .title {
+    font-size: 0.82rem;
+    color: var(--warm-gray);
+    margin-bottom: 1.4rem;
+  }
+
+  .stat-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+    padding-top: 1.4rem;
+    border-top: 1px solid var(--border);
+  }
+
+  .stat { text-align: center; }
+
+  .stat-num {
+    font-family: 'Lora', serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--terracotta);
+    display: block;
+  }
+
+  .stat-label {
+    font-size: 0.7rem;
+    color: var(--light-gray);
+    line-height: 1.4;
+    margin-top: 2px;
+  }
+
+  .lang-row {
+    display: flex;
+    gap: 0.5rem;
+    margin: 1.2rem 0;
+    flex-wrap: wrap;
+  }
+
+  .lang-tag {
+    font-size: 0.72rem;
+    padding: 0.25rem 0.7rem;
+    background: var(--sand);
+    border-radius: 100px;
+    color: var(--warm-gray);
+  }
+
+  /* FLOATING SHAPES */
+  .shape {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.07;
+    z-index: 0;
+  }
+
+  /* SECTIONS */
+  section {
+    padding: 6rem 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .section-label {
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--terracotta);
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+  }
+
+  .section-label::before {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 1.5px;
+    background: var(--terracotta);
+  }
+
+  .section-title {
+    font-family: 'Lora', serif;
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+    font-weight: 500;
+    line-height: 1.25;
+    color: var(--charcoal);
+    margin-bottom: 1rem;
+  }
+
+  .section-title em {
+    font-style: italic;
+    color: var(--terracotta);
+  }
+
+  .section-desc {
+    font-size: 1rem;
+    color: var(--warm-gray);
+    line-height: 1.75;
+    max-width: 560px;
+  }
+
+  /* ABOUT */
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: start;
+    margin-top: 3.5rem;
+  }
+
+  .about-text p {
+    font-size: 1rem;
+    color: var(--warm-gray);
+    line-height: 1.8;
+    margin-bottom: 1.2rem;
+  }
+
+  .about-text p strong {
+    color: var(--charcoal);
+    font-weight: 500;
+  }
+
+  .credential-list { display: flex; flex-direction: column; gap: 1rem; }
+
+  .cred-item {
+    background: var(--warm-white);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 1.2rem 1.4rem;
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    transition: border-color 0.2s, transform 0.2s;
+  }
+
+  .cred-item:hover {
+    border-color: var(--terracotta-light);
+    transform: translateX(4px);
+  }
+
+  .cred-icon {
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    flex-shrink: 0;
+  }
+
+  .cred-icon.teal { background: rgba(122,158,142,0.15); }
+  .cred-icon.terra { background: rgba(193,122,90,0.15); }
+  .cred-icon.sand { background: var(--sand); }
+
+  .cred-item-title {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--charcoal);
+    margin-bottom: 2px;
+  }
+
+  .cred-item-desc {
+    font-size: 0.78rem;
+    color: var(--warm-gray);
+    line-height: 1.5;
+  }
+
+  .cred-status-dot {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    margin-right: 5px;
+    vertical-align: middle;
+  }
+
+  .dot-green { background: var(--sage); }
+  .dot-amber { background: var(--terracotta-light); }
+  .dot-gray { background: var(--light-gray); }
+
+  /* SERVICES */
+  .services-bg {
+    background: var(--warm-white);
+    border-radius: 32px;
+    border: 1px solid var(--border);
+    padding: 5rem 4rem;
+    margin: 0 0;
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 3rem;
+  }
+
+  .service-card {
+    background: var(--cream);
+    border-radius: 20px;
+    padding: 2rem 1.8rem;
+    border: 1px solid var(--border);
+    transition: transform 0.2s, border-color 0.2s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .service-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--terracotta-light);
+  }
+
+  .service-card.featured {
+    background: var(--terracotta);
+    border-color: var(--terracotta);
+    color: white;
+  }
+
+  .service-num {
+    font-family: 'Lora', serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--border);
+    position: absolute;
+    top: 1rem; right: 1.5rem;
+    line-height: 1;
+  }
+
+  .service-card.featured .service-num { color: rgba(255,255,255,0.2); }
+
+  .service-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: var(--sand);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.2rem;
+    font-size: 1.2rem;
+  }
+
+  .service-card.featured .service-icon {
+    background: rgba(255,255,255,0.2);
+  }
+
+  .service-title {
+    font-family: 'Lora', serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 0.7rem;
+  }
+
+  .service-card.featured .service-title { color: white; }
+
+  .service-desc {
+    font-size: 0.85rem;
+    color: var(--warm-gray);
+    line-height: 1.65;
+    margin-bottom: 1.2rem;
+  }
+
+  .service-card.featured .service-desc { color: rgba(255,255,255,0.8); }
+
+  .service-price {
+    font-size: 0.78rem;
+    font-weight: 500;
+    color: var(--terracotta);
+    padding: 0.3rem 0.8rem;
+    background: rgba(193,122,90,0.1);
+    border-radius: 100px;
+    display: inline-block;
+  }
+
+  .service-card.featured .service-price {
+    background: rgba(255,255,255,0.2);
+    color: white;
+  }
+
+  /* BLOG */
+  .blog-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 3rem;
+  }
+
+  .blog-card {
+    background: var(--warm-white);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 1.8rem;
+    transition: transform 0.2s, border-color 0.2s;
+    cursor: pointer;
+    text-decoration: none;
+    display: block;
+  }
+
+  .blog-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--sage-light);
+  }
+
+  .blog-tag {
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--sage-dark);
+    background: rgba(122,158,142,0.12);
+    padding: 0.25rem 0.7rem;
+    border-radius: 100px;
+    display: inline-block;
+    margin-bottom: 1rem;
+  }
+
+  .blog-title {
+    font-family: 'Lora', serif;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.45;
+    color: var(--charcoal);
+    margin-bottom: 0.7rem;
+  }
+
+  .blog-excerpt {
+    font-size: 0.82rem;
+    color: var(--warm-gray);
+    line-height: 1.65;
+    margin-bottom: 1.2rem;
+  }
+
+  .blog-meta {
+    font-size: 0.72rem;
+    color: var(--light-gray);
+  }
+
+  /* CONTACT */
+  .contact-wrap {
+    background: var(--charcoal);
+    border-radius: 32px;
+    padding: 5rem 4rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+    margin: 0;
+  }
+
+  .contact-wrap .section-label { color: var(--terracotta-light); }
+  .contact-wrap .section-label::before { background: var(--terracotta-light); }
+
+  .contact-title {
+    font-family: 'Lora', serif;
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
+    font-weight: 500;
+    color: white;
+    line-height: 1.3;
+    margin-bottom: 1rem;
+  }
+
+  .contact-title em {
+    font-style: italic;
+    color: var(--terracotta-light);
+  }
+
+  .contact-desc {
+    font-size: 0.95rem;
+    color: rgba(255,255,255,0.55);
+    line-height: 1.75;
+    margin-bottom: 2rem;
+  }
+
+  .contact-details { display: flex; flex-direction: column; gap: 0.8rem; }
+
+  .contact-row {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-size: 0.88rem;
+    color: rgba(255,255,255,0.7);
+  }
+
+  .contact-row span:first-child {
+    color: var(--terracotta-light);
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    min-width: 70px;
+  }
+
+  .contact-form { display: flex; flex-direction: column; gap: 1rem; }
+
+  .contact-form input,
+  .contact-form textarea {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 12px;
+    padding: 0.9rem 1.1rem;
+    color: white;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.9rem;
+    outline: none;
+    transition: border-color 0.2s;
+    resize: none;
+  }
+
+  .contact-form input::placeholder,
+  .contact-form textarea::placeholder { color: rgba(255,255,255,0.3); }
+
+  .contact-form input:focus,
+  .contact-form textarea:focus { border-color: var(--terracotta-light); }
+
+  .contact-form textarea { height: 110px; }
+
+  .btn-send {
+    background: var(--terracotta);
+    color: white;
+    border: none;
+    border-radius: 100px;
+    padding: 0.9rem 2rem;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+    align-self: flex-start;
+  }
+
+  .btn-send:hover { background: var(--terracotta-dark); }
+
+  /* FOOTER */
+  footer {
+    text-align: center;
+    padding: 3rem;
+    font-size: 0.78rem;
+    color: var(--light-gray);
+    border-top: 1px solid var(--border);
+  }
+
+  footer strong {
+    color: var(--warm-gray);
+    font-weight: 500;
+  }
+
+  /* DIVIDER */
+  .full-section {
+    padding: 6rem 3rem;
+  }
+
+  .inner {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  /* ANIMATIONS */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 900px) {
+    nav { padding: 1rem 1.5rem; }
+    .nav-links { display: none; }
+    .hero { grid-template-columns: 1fr; padding: 6rem 1.5rem 3rem; gap: 2.5rem; }
+    .hero-visual { display: none; }
+    section { padding: 4rem 1.5rem; }
+    .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    .services-bg { padding: 3rem 1.5rem; }
+    .services-grid { grid-template-columns: 1fr; }
+    .blog-grid { grid-template-columns: 1fr; }
+    .contact-wrap { grid-template-columns: 1fr; gap: 2.5rem; padding: 3rem 1.5rem; }
+    .full-section { padding: 4rem 1.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">Wonny <span>Kim</span></a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#blog">Blog</a></li>
+    <li><a href="#contact" class="nav-cta">Book a session</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<div style="max-width:1200px; margin:0 auto;">
+  <div class="hero">
+    <div class="hero-text">
+      <div class="hero-eyebrow">Vocational Counselor · Seoul, Korea</div>
+      <h1>Helping you find work that <em>fits</em> who you are</h1>
+      <div class="hero-creds">
+        <span class="cred-pill active">CRC — Certified Rehabilitation Counselor</span>
+        <span class="cred-pill progress">CVE — In Progress</span>
+        <span class="cred-pill progress">한국상담심리학회 Trainee</span>
+      </div>
+      <p class="hero-desc">I work with international students, people with disabilities, and individuals navigating career transitions — combining U.S.-credentialed vocational expertise with deep knowledge of the Korean work system.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn-primary">Book a free 20-min call</a>
+        <a href="#services" class="btn-secondary">See services</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-card">
+        <div class="avatar-ring">WK</div>
+        <h3>Jeongwon (Wonny) Kim</h3>
+        <p class="title">CRC · M.S. Rehabilitation Counseling</p>
+        <div class="lang-row">
+          <span class="lang-tag">🇰🇷 Korean</span>
+          <span class="lang-tag">🇺🇸 English</span>
+          <span class="lang-tag">🇻🇳 Vietnamese</span>
+        </div>
+        <div class="stat-row">
+          <div class="stat">
+            <span class="stat-num">6+</span>
+            <span class="stat-label">years job placement</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">3</span>
+            <span class="stat-label">languages</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">2</span>
+            <span class="stat-label">countries practiced</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about" class="fade-in">
+  <div class="section-label">About me</div>
+  <h2 class="section-title">A counselor who's been <em>inside</em> the system</h2>
+  <div class="about-grid">
+    <div class="about-text">
+      <p>I'm Wonny — a <strong>Certified Rehabilitation Counselor (CRC)</strong> based in Seoul, with a background that spans Korean government welfare institutions, U.S. clinical training, and front-line international student support.</p>
+      <p>I spent four years working inside <strong>Korea's Workers' Compensation and Welfare system</strong>, then earned my <strong>M.S. in Rehabilitation Counseling</strong> from the University of Wisconsin-Stout, where I worked as a job coordinator helping individuals with disabilities enter the workforce.</p>
+      <p>Back in Korea, I now work as a consultant for international students — and I'm building toward a <strong>Korean Counseling Psychology license</strong> through 한국상담심리학회. I also speak Vietnamese, which lets me serve one of Korea's largest immigrant communities directly.</p>
+      <p>My approach is evidence-based but deeply human. I don't just help you write a better resume — I help you understand what kind of work fits who you actually are.</p>
+    </div>
+    <div class="credential-list">
+      <div class="cred-item">
+        <div class="cred-icon teal">🎓</div>
+        <div>
+          <div class="cred-item-title"><span class="cred-status-dot dot-green"></span>CRC — Certified Rehabilitation Counselor</div>
+          <div class="cred-item-desc">Issued by CRCC (U.S.). Federally recognized credential in vocational rehabilitation counseling. One of very few CRC holders currently practicing in Korea.</div>
+        </div>
+      </div>
+      <div class="cred-item">
+        <div class="cred-icon terra">📋</div>
+        <div>
+          <div class="cred-item-title"><span class="cred-status-dot dot-amber"></span>CVE — Certified Vocational Evaluator (in progress)</div>
+          <div class="cred-item-desc">Issued by CCWAVES. Adds formal assessment tools: transferable skills analysis, work samples, aptitude testing. Evidence-based career evaluation.</div>
+        </div>
+      </div>
+      <div class="cred-item">
+        <div class="cred-icon sand">🧠</div>
+        <div>
+          <div class="cred-item-title"><span class="cred-status-dot dot-amber"></span>한국상담심리사 (4-year track)</div>
+          <div class="cred-item-desc">Trainee member of 한국상담심리학회. Working toward full Korean Counseling Psychology licensure to integrate vocational and mental health counseling.</div>
+        </div>
+      </div>
+      <div class="cred-item">
+        <div class="cred-icon teal">🏛</div>
+        <div>
+          <div class="cred-item-title"><span class="cred-status-dot dot-green"></span>M.S. Rehabilitation Counseling</div>
+          <div class="cred-item-desc">University of Wisconsin-Stout, Menomonie. Specialized in job placement and disability employment. Practiced in the U.S. for 2 years post-graduation.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<div class="full-section fade-in" id="services">
+  <div class="inner">
+    <div class="services-bg">
+      <div class="section-label">What I offer</div>
+      <h2 class="section-title">Services built around <em>your</em> situation</h2>
+      <p class="section-desc">Every package draws on vocational counseling methods — not generic career advice. I work with the whole person, not just the resume.</p>
+      <div class="services-grid">
+        <div class="service-card">
+          <span class="service-num">01</span>
+          <div class="service-icon">🧭</div>
+          <div class="service-title">Career coaching for international students</div>
+          <div class="service-desc">Resume, 자기소개서, mock interviews, and job search strategy for international undergrads targeting Korean companies.</div>
+          <span class="service-price">From ₩90,000</span>
+        </div>
+        <div class="service-card featured">
+          <span class="service-num">02</span>
+          <div class="service-icon">♿</div>
+          <div class="service-title">Disability employment consulting</div>
+          <div class="service-desc">Job placement support for individuals with disabilities navigating the Korean workplace — accommodation rights, employer communication, and confidence-building.</div>
+          <span class="service-price">Package pricing</span>
+        </div>
+        <div class="service-card">
+          <span class="service-num">03</span>
+          <div class="service-icon">🔍</div>
+          <div class="service-title">Vocational evaluation</div>
+          <div class="service-desc">Formal assessment of transferable skills, interests, and work capacity using evidence-based tools. Ideal before a major career change. (Available upon CVE completion.)</div>
+          <span class="service-price">Coming soon</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- BLOG -->
+<section id="blog" class="fade-in">
+  <div class="section-label">Insights</div>
+  <h2 class="section-title">From the <em>blog</em></h2>
+  <p class="section-desc">Writing on vocational counseling, disability inclusion, and navigating careers in Korea — in Korean and English.</p>
+  <div class="blog-grid">
+    <a href="#" class="blog-card">
+      <span class="blog-tag">Disability & Work</span>
+      <div class="blog-title">How to disclose a disability to a Korean employer (and when not to)</div>
+      <div class="blog-excerpt">Korea's workplace culture around disability is changing — but it's still navigating between legal protection and social stigma. Here's a practical guide.</div>
+      <div class="blog-meta">5 min read · Vocational Counseling</div>
+    </a>
+    <a href="#" class="blog-card">
+      <span class="blog-tag">International Students</span>
+      <div class="blog-title">이력서 vs. resume: what Korean companies actually want from foreign applicants</div>
+      <div class="blog-excerpt">The Korean 이력서 format is deceptively specific. Most international students get it wrong — here's exactly what to include, and what to leave out.</div>
+      <div class="blog-meta">7 min read · Career Advice</div>
+    </a>
+    <a href="#" class="blog-card">
+      <span class="blog-tag">Vocational Counseling</span>
+      <div class="blog-title">What is a CRC — and why does it matter for your career counselor in Korea?</div>
+      <div class="blog-excerpt">Most people in Korea have never heard of the Certified Rehabilitation Counselor credential. Here's what it means, and why it changes the quality of career support you receive.</div>
+      <div class="blog-meta">4 min read · Credentials</div>
+    </a>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<div class="full-section fade-in" id="contact">
+  <div class="inner">
+    <div class="contact-wrap">
+      <div>
+        <div class="section-label">Get in touch</div>
+        <h2 class="contact-title">Let's find the right <em>path</em> for you</h2>
+        <p class="contact-desc">Book a free 20-minute discovery call. No pressure, no pitch — just a conversation about where you are and where you want to go.</p>
+        <div class="contact-details">
+          <div class="contact-row">
+            <span>Based in</span>
+            <span>Seoul, South Korea</span>
+          </div>
+          <div class="contact-row">
+            <span>Languages</span>
+            <span>Korean · English · Vietnamese</span>
+          </div>
+          <div class="contact-row">
+            <span>Sessions</span>
+            <span>Online (Zoom) · In-person Seoul</span>
+          </div>
+          <div class="contact-row">
+            <span>Credentials</span>
+            <span>CRC · M.S. Rehab Counseling</span>
+          </div>
+        </div>
+      </div>
+      <div class="contact-form">
+        <input type="text" placeholder="Your name">
+        <input type="email" placeholder="Email address">
+        <input type="text" placeholder="What brings you here? (e.g. job search, disability support, career change)">
+        <textarea placeholder="Tell me a little about your situation..."></textarea>
+        <button class="btn-send">Send message</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <strong>Jeongwon (Wonny) Kim</strong> · CRC · M.S. Rehabilitation Counseling · Seoul, Korea<br>
+  <span style="margin-top:0.4rem; display:block;">© 2026 · All rights reserved</span>
+</footer>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
